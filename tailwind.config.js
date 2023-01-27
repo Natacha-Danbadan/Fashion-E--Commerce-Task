@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'arimo': ["'Arimo'", "sans-serif"],
+        'lato': ["'Lato'", "sans-serif"]
+      }
+    },
   },
   plugins: [require("daisyui")],
 }
