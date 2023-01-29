@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -8,6 +8,7 @@ import SingleProduct from './pages/SingleProduct'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import Footer from './components/Footer'
+import CheckingOut from './components/CheckingOut'
 
 
 
@@ -15,7 +16,8 @@ function App() {
   return (
     <Router>
       <div className='h-screen'>
-        <Navbar/>
+        <CheckingOut/>
+        {/* <Navbar/> */}
         <main>
           <Routes>
             <Route path='/' element = { <Home/> } />
@@ -27,7 +29,7 @@ function App() {
             <Route path='/checkout' element = { <Checkout/> } />
           </Routes>
         </main>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
 
     </Router>
