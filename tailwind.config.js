@@ -7,7 +7,6 @@ module.exports = {
         arimo: ["'Arimo'", "sans-serif"],
         lato: ["'Lato'", "sans-serif"],
       },
-      
     },
   },
   plugins: [require("daisyui")],
