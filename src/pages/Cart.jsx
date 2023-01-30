@@ -1,9 +1,8 @@
+import CartDetails from "../components/CartDetails"
 
 function Cart() {
   return (
-    <div>
-      
-    </div>
+    <CartDetails/>
   )
 }
 
