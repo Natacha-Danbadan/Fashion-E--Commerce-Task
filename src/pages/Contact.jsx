@@ -3,7 +3,7 @@ function Contact() {
   return (
     <div>
       <ContactHero
-      contactText="CONTACT US "/>
+      contactText=" CONTACT US "/>
     </div>
   );
 }
