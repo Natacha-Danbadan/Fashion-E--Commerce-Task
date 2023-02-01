@@ -68,7 +68,7 @@ const CallToAction = () => {
             <p className="text-white font-lato text-[18px] m-8">
               End of season sale. Buy any 2 items of your choice and get 1 free.
             </p>
-            <button className="text-purple-500 w-[120px] h-[40px] bg-white hover:bg-purple-300">
+            <button className="text-purple-500 w-[120px] h-[40px] bg-white hover:bg-purple-200">
               BUY NOW
             </button>
           </div>
