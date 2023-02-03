@@ -1,12 +1,14 @@
+import CartSingle from "./CartSingle";
 
 
 function CartDetails() {
   return (
-    <div className="">
-      <div className="overflow-x-auto mb-4">
+    <div className="mt-10">
+      <div className="mb-8">
         <table className="table table-compact w-full">
           <thead className="font-arimo font-bold text-hero">
             <tr>
+              <th></th>
               <th>Product</th>
               <th>Price</th>
               <th>Quantity</th>
@@ -14,29 +16,28 @@ function CartDetails() {
             </tr>
           </thead>
           <tbody>
-            <tr className="font-lato">
-              <th>Plain White Shirt</th>
-              <td>$59</td>
-              <td className="badge badge-ghost">1</td>
-              <td>$59</td>
-            </tr>
-            <tr className="font-lato">
-              <th>Plain White Shirt</th>
-              <td>$59</td>
-              <td className="badge badge-ghost">2</td>
-              <td>$59</td>
-            </tr>
-            <tr className="font-lato">
-              <th>Plain White Shirt</th>
-              <td>$59</td>
-              <td className="badge badge-ghost">3</td>
-              <td>$59</td>
-            </tr>
+            <CartSingle/>
+            <CartSingle/>
+            <CartSingle/>
           </tbody>
         </table>
       </div>
-      <div className="w-1/2">
 
+      <div className="w-2/5">
+        <h3 className="mb-8 font-arimo text-hero font-bold text-3xl">Card Totals</h3>
+        <div className="flex border-b justify-between mb-4 font-lato">
+          <p>Subtotal</p>
+          <p className="">$59</p>
+        </div>
+        <div className="flex border-b justify-between mb-4 font-lato">
+          <p>Shipping Fee</p>
+          <p>Free!</p>
+        </div>
+        <div className="flex justify-between font-arimo mb-4 text-hero font-bold">
+          <p>Total</p>
+          <p>$59</p>
+        </div>
+        <button className="bg-checkout p-4">Proceed to Checkout</button>
       </div>
     </div>
   );

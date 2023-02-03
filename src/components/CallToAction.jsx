@@ -6,8 +6,8 @@ import IconCallFour from '../assets/IconCallFour.svg'
 
 const CallToAction = () => {
   return (
-    <div className="">
-      <div className="flex lg:justify-between lg:w-[1366px] lg:flex-row flex-col md:px-14 px-8 pt-8 md:flex-col">
+    <div className="md:px-14 px-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-[20px] mx-auto md:mx-w-none md:mx-0">
         <div className="w-[300px] flex mb-4">
           <img src={IconCallOne} alt="truck" />
           <div className="ml-5">
@@ -45,30 +45,30 @@ const CallToAction = () => {
           </div>
         </div>
       </div>
-      <div className="flex lg:flex-row flex-col md:px-4 px-6 pt-8 space-x-6 md:flex-row ml-4">
-        <div className="flex">
-          <div className="w-[600px] h-[300px] bg-black text-center justify-center items-center mb-5">
-            <h2 className="text-white font-lato uppercase text-[32px] m-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px] mt-10 mx-auto">
+        <div className="mb-8">
+            <div className="p-4 bg-black text-center justify-center items-center py-16">
+              <h2 className="text-white font-lato uppercase text-[32px]">
               Peace of mind
-            </h2>
-            <p className="text-white font-lato text-[18px] m-8">
-              A one-stop platform for all your fashion needs, hassle-free. Buy
-              with a peace of mind.
-            </p>
-            <button className="text-purple-500 w-[120px] h-[40px] bg-white hover:bg-purple-300">
-              BUY NOW
-            </button>
-          </div>
+              </h2>
+              <p className="text-white font-lato text-[18px] mb-6">
+              A one-stop platform for all your fashion needs, hassle-free. Buy with a peace of mind.
+              </p>
+              <button className="text-active p-4 bg-white hover:bg-active hover:text-white">
+                BUY NOW
+              </button>
+            </div>
         </div>
-        <div className="flex">
-          <div className="w-[600px] h-[300px] bg-black text-center justify-center items-center mb-4">
-            <h2 className="text-white font-lato uppercase text-[32px] m-5">
+        
+        <div className="mb-8">
+          <div className="p-4 h-[310px] bg-black text-center justify-center items-center py-16">
+            <h2 className="text-white font-lato uppercase text-[32px]">
               BUY 2 GET 1 FREE
             </h2>
-            <p className="text-white font-lato text-[18px] m-8">
+            <p className="text-white font-lato text-[18px] mb-6">
               End of season sale. Buy any 2 items of your choice and get 1 free.
             </p>
-            <button className="text-purple-500 w-[120px] h-[40px] bg-white hover:bg-purple-200">
+            <button className="text-active p-4 bg-white hover:bg-active hover:text-white">
               BUY NOW
             </button>
           </div>

@@ -15,8 +15,7 @@ function Home() {
   });
   return (
     <div>
-      <CallToAction/>
-      <section className='py-16'>
+      <section className='py-16 md:px-10 px-8'>
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-[20px] mx-auto md:mx-w-none md:mx-0">
             {filteredProducts.map((product) => {
@@ -27,6 +26,7 @@ function Home() {
           </div>
         </div>
       </section>
+      <CallToAction/>
     </div>
   )
 }
