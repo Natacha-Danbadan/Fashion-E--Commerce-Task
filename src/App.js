@@ -8,29 +8,32 @@ import SingleProduct from './pages/SingleProduct'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 import Footer from './components/Footer'
+import ProductProvider from './context/SingleItemContext'
 
 
 
 function App() {
   return (
-    <Router>
-      <div className='h-screen'>
-        <Navbar/>
-        <main>
-          <Routes>
-            <Route path='/' element = { <Home/> } />
-            <Route path='/about' element = { <About/> } />
-            <Route path='/contact' element = { <Contact/> } />
-            <Route path='/contact-message-sent' element = { <ContactMessageSent/> } />
-            <Route path='/single-product' element = { <SingleProduct/> } />
-            <Route path='/cart' element = { <Cart/> } />
-            <Route path='/checkout' element = { <Checkout/> } />
-          </Routes>
-        </main>
-        <Footer/>
-      </div>
+    <ProductProvider>
+      <Router>
+        <div className='h-screen'>
+          <Navbar/>
+          <main>
+            <Routes>
+              <Route path='/' element = { <Home/> } />
+              <Route path='/about' element = { <About/> } />
+              <Route path='/contact' element = { <Contact/> } />
+              <Route path='/contact-message-sent' element = { <ContactMessageSent/> } />
+              <Route path='/product/:id' element = { <SingleProduct/> } />
+              <Route path='/cart' element = { <Cart/> } />
+              <Route path='/checkout' element = { <Checkout/> } />
+            </Routes>
+          </main>
+          <Footer/>
+        </div>
 
-    </Router>
+      </Router>
+    </ProductProvider>
   );
 }
 
