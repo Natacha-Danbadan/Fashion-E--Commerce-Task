@@ -1,3 +1,5 @@
+
+import CallToAction from '../components/CallToAction'
 import React, {useContext} from 'react';
 import { SingleItemContext } from '../context/SingleItemContext';
 import SingleItem from '../components/SingleItem';
@@ -13,6 +15,7 @@ function Home() {
   });
   return (
     <div>
+      <CallToAction/>
       <section className='py-16'>
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-[20px] mx-auto md:mx-w-none md:mx-0">
