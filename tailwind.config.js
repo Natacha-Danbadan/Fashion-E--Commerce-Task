@@ -17,7 +17,7 @@ module.exports = {
         testifierName: "#1D1D1D",
       },
       screens: {
-        'xs': '475px',
+        'xs': '360px',
       }
     },
   },
