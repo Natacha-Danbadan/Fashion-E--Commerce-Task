@@ -4,9 +4,9 @@ import { Link } from "react-router-dom"
 function MessageSent() {
 
   return (
-    <div className="container sm:w-full md:w-[1160px] h-auto xl:ml-[143px] xl:mr-[63px]"> 
+    <div className="w-full sm:w-full h-auto xl:pl-36 pt-6 px-3 xl:px-0"> 
       <div className="flex flex-col lg:flex-row"> 
-        <div className="flex flex-col px-3">
+        <div className="flex flex-col">
         <div className="flex items-center h-[269px]">
           <h1 className="sm:w-full md:w-[659px] h-12 font-arimo text-4xl font-bold text-grey-700 leading-tight">
             Message sent. We'll contact you soon.
@@ -22,22 +22,22 @@ function MessageSent() {
         </Link>
        </div>   
         </div>
-        <div className="lg:ml-[151px] w-full h-full lg:w-[350px] lg:h-[269px] mt-28 lg:mt-0 ml-0 mx-auto px-3">
+        <div className="lg:pl-36 w-full h-full  mt-28 lg:mt-0">
           <div className="w-full h-[107px]">
             <h1 className="text-xl font-arimo font-bold text-hero leading-tight">
               Visit Us
             </h1>
-            <p className="text-grey-600 text-base font-lato font-normal leading-none mt-4">
+            <p className="text-grey-600 text-base font-lato font-normal leading-snug mt-4">
               UET Lahore, Punjab, Pakistan
               <br/>
               Phone: +923039898987
             </p>
           </div>
-          <div className="w-full h-114">
+          <div className="w-full">
             <h1 className=" text-xl font-arimo text-hero font-bold leading-48 mt-12">
               Get In Touch
             </h1>
-            <p className="mt-4 leading-none text-grey-600 text-base font-lato">
+            <p className="mt-4 leading-tight text-grey-600 text-base font-lato">
               You can get in touch with us on this provided<br/>
               email. 
               <br/><br/>
