@@ -23,10 +23,10 @@ function CartDetails() {
         </table>
       </div>
 
-      <div className="w-2/5">
+      <div className="lg:w-2/5 w-full">
         <h3 className="mb-8 font-arimo text-hero font-bold text-3xl">Card Totals</h3>
         <div className="flex border-b justify-between mb-4 font-lato">
-          <p>Subtotal</p>
+          <p>Subtotanpm</p>
           <p className="">$59</p>
         </div>
         <div className="flex border-b justify-between mb-4 font-lato">
