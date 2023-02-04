@@ -4,24 +4,24 @@ import { Link } from "react-router-dom"
 function MessageSent() {
 
   return (
-    <div className="w-full sm:w-full h-auto xl:pl-36 pt-6 px-3 xl:px-0"> 
+    <div className="w-full sm:w-full h-auto xl:pl-36 pt-12 px-8 xl:px-0"> 
       <div className="flex flex-col lg:flex-row"> 
         <div className="flex flex-col">
-        <div className="flex items-center h-[269px]">
-          <h1 className="sm:w-full md:w-[659px] h-12 font-arimo text-4xl font-bold text-grey-700 leading-tight">
-            Message sent. We'll contact you soon.
-          </h1>          
-        </div>
-        <div className="xl:mt-[132px]">
-            <Link className="absolute" to={'/contact'}>
-            <button className="w-[143px] h-[58px] h-full py-5 px-9 gap-2.5 flex flex-row items-center justify-end bg-active text-white text-sm font-lato font-normal leading-6 text-center uppercase rounded-3 hover:bg-blue-800">
-              <span className="w-32 h-6">
-                GO BACK
-              </span>
-            </button>
-        </Link>
-       </div>   
-        </div>
+          <div className="flex items-center h-[100px] lg:h-[269px]">
+            <h1 className="sm:w-full md:w-[659px] h-12 font-arimo text-2xl md:text-4xl font-bold text-grey-700 leading-tight">
+              Message sent. We'll contact you soon.
+            </h1>          
+          </div>
+          <div className="xl:mt-[56px] mt-10">
+              <Link className="absolute" to='/'>
+              <button className="py-5 px-9 gap-2.5 flex flex-row items-center justify-end bg-active text-white text-sm font-lato font-normal leading-6 text-center uppercase rounded-3 hover:bg-hero hover:text-white">
+                <span className="w-32 h-6">
+                  GO BACK
+                </span>
+              </button>
+          </Link>
+        </div>   
+      </div>
         <div className="lg:pl-36 w-full h-full  mt-28 lg:mt-0">
           <div className="w-full h-[107px]">
             <h1 className="text-xl font-arimo font-bold text-hero leading-tight">
@@ -34,7 +34,7 @@ function MessageSent() {
             </p>
           </div>
           <div className="w-full">
-            <h1 className=" text-xl font-arimo text-hero font-bold leading-48 mt-12">
+            <h1 className=" text-xl font-arimo text-hero font-bold leading-48 mt-6 md:mt-12">
               Get In Touch
             </h1>
             <p className="mt-4 leading-tight text-grey-600 text-base font-lato">
