@@ -1,7 +1,16 @@
+import { useState } from "react";
+
+import CheckoutSuccessMessage from "./CheckoutSuccessMessage";
 function CheckingOut() {
+  const [showModal, setShowModal] = useState(false);
+  const openModal = () => {
+    setShowModal(true);
+  };
+
   return (
     <div className="px-16 pt-4">
       <div>
+      {showModal ? <CheckoutSuccessMessage setShowModal={setShowModal} /> : null}
         <h2 className="font-arimo font-bold text-4xl mb-6">Billing Details</h2>
         <form action="">
           <div className="flex flex-col">
@@ -14,7 +23,7 @@ function CheckingOut() {
             <input
               type="text"
               name="name"
-              className="border border-input mb-4 p-2 w-5/12"
+              className="border border-input mb-4 p-2 w-5/12 required"
             />
           </div>
 
@@ -111,7 +120,12 @@ function CheckingOut() {
 
           <div className="flex justify-between pb-14">
             <div></div>
-            <button className="bg-[#D6763C] text-white font-lato font-base py-3 px-9">PLACE ORDER</button>
+            <button
+              className="bg-orange text-white font-lato font-base py-3 px-9"
+              onClick={openModal}
+            >
+              PLACE ORDER
+            </button>
           </div>
         </div>
       </div>

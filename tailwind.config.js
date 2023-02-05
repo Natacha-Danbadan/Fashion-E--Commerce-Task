@@ -11,6 +11,8 @@ module.exports = {
       colors: {
         grey: '#555555',
         input: '#EBEBEB',
+        orange: '#D6763C',
+        modal: 'rgba(214, 118, 60, 0.72)'
       },
     },
   },

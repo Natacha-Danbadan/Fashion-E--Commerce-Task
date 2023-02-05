@@ -7,8 +7,7 @@ import ContactMessageSent from './pages/ContactMessageSent'
 import SingleProduct from './pages/SingleProduct'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
-import Footer from './components/Footer'
-import CheckingOut from './components/CheckingOut'
+// import Footer from './components/Footer'
 
 
 
@@ -16,8 +15,8 @@ function App() {
   return (
     <Router>
       <div className='h-screen'>
-        <CheckingOut/>
         {/* <Navbar/> */}
+        <Checkout/>
         <main>
           <Routes>
             <Route path='/' element = { <Home/> } />
@@ -29,7 +28,7 @@ function App() {
             <Route path='/checkout' element = { <Checkout/> } />
           </Routes>
         </main>
-        {/* <Footer/> */}
+        {/* <Footer/>  */}
       </div>
 
     </Router>
