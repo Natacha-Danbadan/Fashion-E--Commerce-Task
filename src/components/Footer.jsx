@@ -34,7 +34,7 @@ function Footer() {
             <Link to='#'>Order Status</Link> <br />
             <Link to='#'>Delivery</Link> <br />
             <Link to='#'>Shipping Info</Link> <br />
-            <Link to='#'>FAQ</Link>FAQ 
+            <Link to='#'>FAQ</Link>
 
             </span>
           </div>
@@ -62,18 +62,18 @@ function Footer() {
           <h3 className="h-[14px] font-arimo text-xs text-hero text-bold">
             GET IN THE KNOW
           </h3>
-
-          <div className=" flex border-b border-black w-[253px] pb-2"> <input class="bg-white focus:outline-none focus:shadow-outline mt-[41px] rounded-lg py-2 px-4 block w-full appearance-none leading-normal" type="text" placeholder="Enter Email" />
-
-          <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white ml-33 px-0  border-blue-500 hover:border-transparent pt-12 rounded border-y-8 border-y-transparent "> </button>
-           </div>
+ 
+          <div className="border-b border-black w-[253px] pb-2"> 
           
+          <input className="bg-white focus:outline-none focus:shadow-outline mt-[41px] py-2 block w-full appearance-none leading-normal" type="text" placeholder="Enter Email" />
+          
+           </div>
 
         </div>
         
       </div>
 
-      <div className="w-auto mx-[63px] mt-20 grid md:grid-cols-2 gap-y-4 " >
+      <div className="w-auto mx-[63px] mt-20 grid md:grid-cols-2 gap-y-4" >
         <div className='order-2 md:order-1'>
         <span className="h-[17px] font-lato text-base font-normal font-hero">
          &copy; 2020 NorthStar eCommerce
@@ -94,8 +94,6 @@ function Footer() {
           <img src={VisaE} alt="" />
 
           </div>
-
-        
 
       </div>
       
