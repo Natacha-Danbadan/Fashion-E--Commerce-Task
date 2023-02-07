@@ -34,6 +34,19 @@ function SingleProduct() {
             <h1 className='text-[36px] font-bold mb-2 mx-auto lg:mx-0 max-w-[450px] font-arimo'>{title}</h1>
             <div className='text-xl text-neutral-content font-medium mb-6'>${price}</div>
             <p className='mb-8'>{description}</p>
+            {/* size */}
+            <div className='mb-5'>
+              <form action="">
+                <label htmlFor="size"></label>
+                <select name="" id="" className='ms-expand'>
+                  <option value="">Select size</option>
+                  <option value="">Small <span>S</span></option>
+                  <option value="">Medium <span>M</span></option>
+                  <option value="">Large <span>L</span></option>
+                  <option value="">Extra Large <span>XL</span></option>
+                </select>
+              </form>
+            </div>
             <button className='bg-black py-4 px-8 text-white'>Add to cart</button>
           </div>
         </div>
