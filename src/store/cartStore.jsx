@@ -47,13 +47,14 @@ const useCartStore = create(persist((set,get) => ({
             "numberInCart":1
         }
     },
-    numberInCart: 0,
+    numberInCart: 3,
     addToCart: (cartObj) => {
         return set((prevState) => ({ cart: {...prevState.cart, [cartObj.id]: cartObj}, numberInCart: prevState.numberInCart + 1 }))
     },
     removeFromCart: (id) => {
         let prevCart = get().cart
         delete prevCart[id]
+        console.log('removed')
         return set((prevState) => ({ cart: prevCart, numberInCart: prevState.numberInCart - 1 }))
     },
     existsInCart: (id) => get().cart.hasOwnProperty(id),
@@ -81,7 +82,7 @@ const useCartStore = create(persist((set,get) => ({
 }),
     {
         name: "cart-storage",
-        getStorage: createJSONStorage(()=> sessionStorage)
+        storage: createJSONStorage(()=> sessionStorage)
     }
 ))
 

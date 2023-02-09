@@ -1,12 +1,27 @@
 import CartSingle from "./CartSingle";
 import useCartStore from "../store/cartStore";
+import { useState, useEffect } from "react";
 
-
-
-
-
-
+ 
 function CartDetails() {
+
+const cart = useCartStore((state)=>state.cart)
+const removeFromCart = useCartStore((state)=>state.removeFromCart)
+const total = useCartStore((state)=>state.total)
+const getTotal = useCartStore((state)=>state.getTotal)
+const numberInCart = useCartStore((state)=>state.numberInCart)
+const increaseNumberInCart = useCartStore((state)=>state.increaseNumberInCart)
+const decreaseNumberInCart = useCartStore((state)=>state.decreaseNumberInCart)
+
+const [checkoutCart, setCheckoutCart] = useState([])
+
+useEffect(()=> {
+  setCheckoutCart(Object.values(cart)) 
+},[numberInCart, cart])
+
+useEffect(()=>{
+  getTotal()
+}, [numberInCart,cart, getTotal])
 
   return (
     <div className="mt-10">
@@ -22,9 +37,7 @@ function CartDetails() {
             </tr>
           </thead>
           <tbody>
-            <CartSingle/>
-            <CartSingle/>
-            <CartSingle/>
+          {checkoutCart.map((item)=> < CartSingle singleCartProp={{...item, removeFromCart, increaseNumberInCart, decreaseNumberInCart}} key={item.id} />)}
           </tbody>
         </table>
       </div>
@@ -33,7 +46,7 @@ function CartDetails() {
         <h3 className="mb-8 font-arimo text-hero font-bold text-3xl">Card Totals</h3>
         <div className="flex border-b justify-between mb-4 font-lato">
           <p>Subtotal</p>
-          <p className="">$59.00</p>
+          <p className="">{`$${total.toFixed(2)}`}</p>
         </div>
         <div className="flex border-b justify-between mb-4 font-lato">
           <p>Shipping Fee</p>
@@ -41,7 +54,7 @@ function CartDetails() {
         </div>
         <div className="flex justify-between font-arimo mb-4 text-hero font-bold">
           <p>Total</p>
-          <p>$59.00</p>
+          <p>{`$${total.toFixed(2)}`}</p>
         </div>
         <button className="bg-checkout text-white p-3">PROCEED TO CHECKOUT</button>
       </div>
