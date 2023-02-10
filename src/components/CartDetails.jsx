@@ -52,7 +52,7 @@ useEffect(()=>{
           <p>Shipping Fee</p>
           <p>Free!</p>
         </div>
-        <div className="flex justify-between font-arimo mb-4 text-hero font-bold">
+        <div className="flex justify-between font-arimo mb-3 text-hero font-bold">
           <p>Total</p>
           <p>{`$${total.toFixed(2)}`}</p>
         </div>
