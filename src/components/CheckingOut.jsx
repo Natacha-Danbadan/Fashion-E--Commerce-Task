@@ -1,6 +1,28 @@
+import { toast } from "react-toastify";
 import CheckoutSuccessMessage from "./CheckoutSuccessMessage";
 
 function CheckingOut() {
+  const notify = () => {
+    return toast(<CheckoutSuccessMessage />, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      closeButton: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      style: {
+        backgroundColor: "#D6763C",
+        color: "white",
+        margin: "0 auto",
+        padding: "30px 10px",
+        fontSize: "16px",
+        fontFamily: "lato",
+      },
+    });
+  };
   return (
     <div className="px-16 pt-4">
       <div>
@@ -119,17 +141,16 @@ function CheckingOut() {
           <div className="flex justify-between pb-14">
             <div></div>
             <button
-              className="bg-orange text-white font-lato font-base py-3 px-9"
-              
+              className="bg-checkout text-white font-lato font-base py-3 px-9"
+              onClick={notify}
             >
               PLACE ORDER
             </button>
           </div>
         </div>
       </div>
-     
     </div>
-  )
+  );
 }
 
-export default CheckingOut
+export default CheckingOut;
