@@ -1,6 +1,7 @@
-import {useState} from "react"
+import { useState} from "react";
 import { FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";
 import {Link} from "react-router-dom"
+import useCartStore from "../store/cartStore"
 
 
 function Navbar() {
@@ -12,6 +13,8 @@ function Navbar() {
   const linkFunc =() => {
     setOpenModal(!openModal)
   }
+  const numberInCart = useCartStore((state)=>state.numberInCart)
+  console.log(numberInCart)
 
 
   return (
@@ -34,7 +37,12 @@ function Navbar() {
                 </ul>
               </div>
               <div className="w-3/12 text-black navbar-end">
-                <button className="mr-4"><FaShoppingCart size={28}/></button>
+                <div className="relative">
+                  <Link to='/cart'><button className="mr-4"><FaShoppingCart size={28}/></button></Link>
+                  <div className={`absolute top-[8px] right-[6px] aspect-square rounded-full w-4 ${numberInCart ? "flex": "hidden"} justify-center items-center bg-red-600`}>
+                    <p className="text-white text-xs">{ numberInCart }</p>
+                  </div>
+                </div>
                 <button className="lg:hidden z-50" onClick={modalHandler}>
                 {openModal ? <FaTimes size={28}/> : <FaBars size={28}/>}
                 </button>

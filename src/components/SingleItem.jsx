@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom'
 
 function SingleItem({product}) {
-  console.log(product)
+  // console.log(product)
 
   const { id, image, title,price } = product
   return (

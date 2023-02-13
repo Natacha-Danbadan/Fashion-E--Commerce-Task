@@ -1,6 +1,8 @@
 import CartSingle from "./CartSingle";
 import useCartStore from "../store/cartStore";
 import { useState, useEffect } from "react";
+import {Link} from "react-router-dom"
+
 
  
 function CartDetails() {
@@ -52,11 +54,11 @@ useEffect(()=>{
           <p>Shipping Fee</p>
           <p>Free!</p>
         </div>
-        <div className="flex justify-between font-arimo mb-3 text-hero font-bold">
+        <div className="flex justify-between font-arimo mb-4 text-hero font-bold">
           <p>Total</p>
           <p>{`$${total.toFixed(2)}`}</p>
         </div>
-        <button className="bg-checkout text-white p-3">PROCEED TO CHECKOUT</button>
+        <Link to='/checkout'><button className="bg-checkout text-white p-3">PROCEED TO CHECKOUT</button></Link>
       </div>
     </div>
   );
