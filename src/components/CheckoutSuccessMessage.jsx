@@ -1,11 +1,9 @@
-
-
 function CheckoutSuccessMessage() {
   return (
-    <div>
-      
+    <div className="">
+      ORDER PLACED SUCCESSFULLY 🙌
     </div>
-  )
+  );
 }
 
-export default CheckoutSuccessMessage
+export default CheckoutSuccessMessage;

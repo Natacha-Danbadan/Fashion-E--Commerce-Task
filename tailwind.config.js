@@ -15,10 +15,11 @@ module.exports = {
         testimonialSection: "#E5E5E5",
         testimonialTexts: "#555555",
         testifierName: "#1D1D1D",
+        asterik: "#EB1414",
       },
       screens: {
-        'xs': '360px',
-      }
+        xs: "360px",
+      },
     },
   },
   plugins: [require("daisyui")],
