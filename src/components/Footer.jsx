@@ -3,6 +3,7 @@ import Mastercard from '../assets/Mastercard.png'
 import Paypal from '../assets/Paypal.png'
 import VisaE from '../assets/VisaE.png'
 import { Link } from 'react-router-dom'
+import { BsChevronRight } from 'react-icons/bs'
 
 function Footer() {
   return (
@@ -58,18 +59,20 @@ function Footer() {
 
         </div>
 
-        <div className="mt-12 lg:mt-[70px]">
+        <div className="my-11 lg:mt-[70px]">
           <h3 className="h-[14px] font-arimo text-xs text-hero text-bold">
             GET IN THE KNOW
           </h3>
  
-          <div className="border-b border-black w-[253px] pb-2"> 
+          <div className="border-b border-black pb-2 ">  
           
-          <input className="bg-white focus:outline-none focus:shadow-outline mt-[41px] py-2 block w-full appearance-none leading-normal" type="text" placeholder="Enter Email" />
+          <input className="bg-white focus:outline-none focus:shadow-outline mt-[44px] py-2 block m-[1px] appearance-none leading-normal" type="text" placeholder="Enter Email" /> 
+          < BsChevronRight  className=' ml-[250px] '/>
           
            </div>
 
         </div>
+        
         
       </div>
 
@@ -94,10 +97,14 @@ function Footer() {
           <img src={VisaE} alt="" />
 
           </div>
+          
 
       </div>
       
+      
+      
     </div>
+    
   )
 }
 
