@@ -7,8 +7,8 @@ import { BsChevronRight } from 'react-icons/bs'
 
 function Footer() {
   return (
-    <div className="w-auto h-[477px] grid">
-      <div className="mx-[63px] grid grid-cols-2 lg:grid-cols-4 gap-x-24">
+    <div className="w-auto pt-20 lg:pt-0 grid">
+      <div className="mx-[63px] pb-4 grid grid-cols-2 lg:grid-cols-4 gap-x-24">
         <div className="mt-[70px]">
           <h3 className="h-[14px] font-arimo font-bold text-xs text-hero">
             COMPANY INFO
@@ -76,9 +76,9 @@ function Footer() {
         
       </div>
 
-      <div className="w-auto mx-[63px] mt-20 grid md:grid-cols-2 gap-y-4" >
-        <div className='order-2 md:order-1'>
-        <span className="h-[17px] font-lato text-base font-normal font-hero">
+      <div className="w-auto mx-[63px] py-10 grid md:grid-cols-2 gap-y-4 border-t-2" >
+        <div className=''>
+        <span className=" font-lato text-base font-normal font-hero">
          &copy; 2020 NorthStar eCommerce
           </span>
 
@@ -90,17 +90,15 @@ function Footer() {
           </span>
         </div> 
 
-          <div className='flex order-1 md:order-2'>
-          <img src={Visa} alt="" />  
-          <img src={Mastercard} alt="" />
-          <img src={Paypal} alt="" />
-          <img src={VisaE} alt="" />
+          <div className='flex justify-end gap-14'>
+            <img src={Visa}  alt="Visa logo"  className='aspect-square w-14'/>  
+            <img src={Mastercard} alt="MasterCard logo" className='aspect-square w-14'/>
+            <img src={Paypal} alt="Paypal logo" className='aspect-square w-14'/>
+            <img src={VisaE} alt="Visa Electron logo" className='aspect-square w-16'/>
 
           </div>
           
-
       </div>
-      
       
       
     </div>

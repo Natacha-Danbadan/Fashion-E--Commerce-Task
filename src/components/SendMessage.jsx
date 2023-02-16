@@ -1,11 +1,9 @@
-import React from "react"
 import { Link } from "react-router-dom"
 
 function SendMessage() {
   const handleSubmit = (e) => {
   e.preventDefault();
-
-  return <Link to='/contact-message-sent'></Link>;
+  // return <Link to='/contact-message-sent'></Link>;
   }
 
   return (    
@@ -20,7 +18,7 @@ function SendMessage() {
               If you have any query or any type of suggestion, you can contact us here. We would love to hear from you.
             </p>
           </div>
-          <form onSubmit={handleSubmit} className="w-full h-auto lg:w-[820px] lg:h-[408px] mt-12">
+          <form onSubmit={handleSubmit} method="post" className="w-full h-auto lg:w-[820px] lg:h-[408px] mt-12">
             <div className="flex flex-col lg:flex-row">
               <div className="w-full lg:w-[400px] lg:h-[86px] h-auto">
                 <label className="font-lato font-medium text-sm leading-19 text-grey-600" for="name">
